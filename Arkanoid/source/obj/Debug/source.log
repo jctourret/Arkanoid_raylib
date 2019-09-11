@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\source.cpp(36): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\source.cpp(37): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\source.cpp(48): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\source.cpp(49): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\source.cpp(50): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  source.vcxproj -> C:\Users\Juan Cruz\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe
