@@ -1,39 +1,10 @@
 #include "raylib.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <math.h>
-
-struct Bricks
-{
-	Vector2 position;
-	bool active;
-};
-const int bricksPerLine = 20;
-const int linesOfBricks = 5;
-Bricks brick[linesOfBricks][bricksPerLine];
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
 
 int main() {
-	const int screenWidth = 800;
-	const int screenHeight = 450;
-	InitWindow(screenWidth, screenHeight, "raylib [core] example - keyboard input");
-
-	bool gameMenuOn = true;
-	Vector2 ballMenuPosition;
-	Vector2 ballPosition;
-	ballPosition.x = screenWidth / 2;
-	ballPosition.y = screenHeight / 2;
-	Vector2 ballSpeed = { 4,3 };
-	Rectangle rectMenu;
-	rectMenu.width = 100;
-	rectMenu.height = 50;
-	rectMenu.x = 350;
-	rectMenu.y = 250;
-	Rectangle rectMenu2;
-	rectMenu2.width = 100;
-	rectMenu2.height = 50;
-	rectMenu2.x = 350;
-	rectMenu2.y = 350;
 	Rectangle player;
 	player.width = 75;
 	player.height = 10;
