@@ -1,7 +1,7 @@
 #include "Ball.h"
 Ball ball;
 const int ballPosition = GetScreenWidth() / 2;
-void BallF::initBall(){
-	ball.Position.x = ballPosition;
-	ball.Position.y = ballPosition;
+void BallF::init(Ball ball, int XY){
+	ball.Position.x = XY;
+	ball.Position.y = XY;
 }

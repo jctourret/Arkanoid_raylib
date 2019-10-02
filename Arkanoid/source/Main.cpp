@@ -5,18 +5,8 @@
 #include <cmath>
 
 int main() {
-	Rectangle player;
-	player.width = 75;
-	player.height = 10;
-	player.x = screenWidth / 2;
-	player.y = screenHeight-screenHeight / 10;
-	Rectangle Brick;
-	Brick.width = screenWidth/bricksPerLine;
-	Brick.height = 40;
-	int ballRadius = 10;
 	int blockCollums = 5;
 	int blockRows = 10;
-	int playerSpeed = 8;
 	int playerlives = 5;
 	bool Victory=false;
 	bool gameOver = false;

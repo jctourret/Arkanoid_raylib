@@ -8,7 +8,8 @@ struct Ball {
 	Vector2 Speed;
 };
 extern Ball ball;
+extern const int ballPosition = GetScreenWidth() / 2;
 namespace BallF {
-	extern void initBall();
+	extern void init(Ball ball, int XY);
 }
 #endif BALL_H

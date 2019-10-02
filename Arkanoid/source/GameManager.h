@@ -2,7 +2,9 @@
 #define GAMEMANAGER_H
 enum Gamestates {
 	Menu,
-	Gameplay,
+	FirstLevel,
+	SecondLevel,
+	ThirdLevel,
 	End
 };
 extern bool gameIsOn;
