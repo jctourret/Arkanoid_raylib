@@ -1,17 +1,9 @@
 #include "raylib.h"
-#include <cstdio>
-#include <cstdlib>
-#include <ctime>
-#include <cmath>
-
+#include "GameManager.h"
 int main() {
-	int blockCollums = 5;
+	gameManager::runGame();
+	/*int blockCollums = 5;
 	int blockRows = 10;
-	int playerlives = 5;
-	bool Victory=false;
-	bool gameOver = false;
-	bool ballActive = true;
-	SetTargetFPS(60);
 	do {
 		while (gameMenuOn && !WindowShouldClose()){
 			ballMenuPosition = GetMousePosition();
@@ -167,5 +159,6 @@ int main() {
 		}
 	} while (!gameOver && !WindowShouldClose());
 	CloseWindow();
+	*/
 	return 0;
 }

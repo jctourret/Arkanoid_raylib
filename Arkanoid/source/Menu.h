@@ -1,26 +1,31 @@
 #ifndef MENU_H
 #define MENU_H
 #include "raylib.h"
-struct Cursor{
-	Vector2 Position;
-	Color Color = WHITE;
-	Vector2 Speed = { 7.5f,6.0f };
-	int Radius = 10;
-};
-extern Cursor cursor;
-extern Rectangle playButton;
-extern Rectangle exitButton;
-extern const int playButtonWidth;
-extern const int playButtonHeight;
-extern const int playButtonY;
-extern const int playButtonX;
-extern const int exitButtonWidth = 100;
-extern const int exitButtonHeight = 50;
-extern const int exitButtonY = GetScreenHeight() / 2 - exitButtonHeight * 4;
-extern const int exitButtonX = GetScreenWidth() - exitButtonWidth / 2;
-namespace MenuF {
+#include "GameManager.h"
+namespace menu {
+	struct Cursor {
+		Vector2 Position;
+		Color Color = WHITE;
+		Vector2 Speed = { 7.5f,6.0f };
+		int Radius = 10;
+	};
+	struct Button {
+		Rectangle Body;
+		Color Color;
+	};
+	extern Cursor cursor;
+	extern Button play;
+	extern Button exit;
+	extern const int playWidth;
+	extern const int playHeight;
+	extern const int playY;
+	extern const int playX;
+	extern const int exitWidth;
+	extern const int exitHeight;
+	extern const int exitY;
+	extern const int exitX;
+	extern const Color ButtonColor;
 	extern void run();
-	extern void initButton(Rectangle button, int width, int height, int x, int y);
-	
+	extern void initButton(Button &button,int width, int height, int x, int y, Color color);
 }
 #endif MENU_H

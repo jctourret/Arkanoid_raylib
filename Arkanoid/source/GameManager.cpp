@@ -5,34 +5,42 @@
 #include "Ball.h"
 #include "Player.h"
 #include "Bricks.h"
-bool gameIsOn;
-Gamestates Gamestate;
-void runGame() {
-	init();
-	while (!WindowShouldClose() || gameIsOn) {
-		switch (Gamestate)
-		{
-		case Menu:
-			MenuF::run();
-			break;
-		case FirstLevel:
-			break;
-		case SecondLevel:
-			break;
-		case ThirdLevel:
-			break;
-		case End:
-			break;
-		}
-	}
-}
-void init() {
+using namespace menu;
+using namespace bricks;
+using namespace players;
+using namespace balls;
+
+namespace gameManager{
+	bool gameIsOn;
 	const int screenWidth = 800;
 	const int screenHeight = 450;
-	InitWindow(screenWidth, screenHeight, "Arkanoid");
-	BallF::init(ball, ballPosition);
-	MenuF::initButton(playButton, playButtonWidth, playButtonHeight, playButtonX, playButtonY);
-	MenuF::initButton(exitButton, exitButtonWidth, exitButtonHeight, exitButtonX, exitButtonY);
-	PlayerF::init(player, playerWidth, playerHeight, playerX, playerY,playerLives,playerSpeed, playerColor);
-	BrickF::init(brick[linesOfBricks][bricksPerLine], brickWidth, brickHeigth);
+	Gamestates Gamestate;
+	void init(){
+		InitWindow(screenWidth, screenHeight, "Arkanoid");
+		balls::init(ball, ballPosition);
+		initButton(play, playWidth, playHeight, playX, playY,ButtonColor);
+		initButton(exit, exitWidth, exitHeight, exitX, exitY, ButtonColor);
+		init(player, playerWidth, playerHeight, playerX, playerY, playerLives, playerSpeed, playerColor);
+		init(brick[linesOfBricks][bricksPerLine], brickWidth, brickHeigth);
+	}
+	void runGame() {
+		gameManager::init();
+		while (!WindowShouldClose() || gameIsOn) {
+			switch (Gamestate)
+			{
+			case Menu:
+				menu::run();
+				break;
+			case FirstLevel:
+				break;
+			case SecondLevel:
+				break;
+			case ThirdLevel:
+				break;
+			case End:
+				break;
+			}
+		}
+	}
+
 }
