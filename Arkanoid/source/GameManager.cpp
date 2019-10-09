@@ -1,6 +1,7 @@
 #include "GameManager.h"
 #include "raylib.h"
 #include "Menu.h"
+#include "FirstLevel.h"
 #include "End.h"
 #include "Ball.h"
 #include "Player.h"
@@ -12,7 +13,7 @@ using namespace players;
 using namespace balls;
 namespace gameManager{
 	bool gameIsOn=true;
-	Gamestates Gamestate;
+	Gamestates Gamestate=Menu;
 	void init();
 	void runGame() {
 		gameManager::init();
@@ -22,6 +23,7 @@ namespace gameManager{
 				menu::run();
 				break;
 			case FirstLevel:
+				firstlv::run();
 				break;
 			case SecondLevel:
 				break;

@@ -1,2 +1,4 @@
 ﻿  FirstLevel.cpp
-  source.vcxproj -> C:\Users\Administrador\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe
+c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(41): error C2664: 'void firstlv::drawFirstLevel(bricks::Brick (&)[5][15])': el argumento 1 no puede convertirse de 'bricks::Brick' a 'bricks::Brick (&)[5][15]'
+c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(68): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(69): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
