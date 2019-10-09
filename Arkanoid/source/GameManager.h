@@ -10,8 +10,6 @@ namespace gameManager {
 	};
 	extern bool gameIsOn;
 	extern Gamestates Gamestate;
-	extern const int screenWidth;
-	extern const int screenHeight;
 	void runGame();
 }
 #endif GAMEMANAGER_H

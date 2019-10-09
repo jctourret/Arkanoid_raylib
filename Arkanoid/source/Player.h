@@ -9,13 +9,6 @@ namespace players {
 		int Speed;
 	};
 	extern Player player;
-	extern const Color playerColor;
-	extern const int playerX;
-	extern const int playerY;
-	extern const int playerWidth;
-	extern const int playerHeight;
-	extern const int playerSpeed;
-	extern const int playerLives;
-	void init(Player player, int width, int height, int x, int y,int lives,int speed, Color color);
+	void init();
 }
 #endif PLAYER_H

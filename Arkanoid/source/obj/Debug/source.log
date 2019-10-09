@@ -1,6 +1,2 @@
-﻿  Menu.cpp
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(28): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(29): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(30): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+﻿  FirstLevel.cpp
   source.vcxproj -> C:\Users\Administrador\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe

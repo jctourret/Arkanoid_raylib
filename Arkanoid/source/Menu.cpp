@@ -1,6 +1,18 @@
 #include "Menu.h"
+#include "Window.h"
 using namespace gameManager;
+using namespace window;
 namespace menu {
+	struct Cursor {
+		Vector2 Position;
+		Color Color = WHITE;
+		Vector2 Speed = { 7.5f,6.0f };
+		int Radius = 10;
+	};
+	struct Button {
+		Rectangle Body;
+		Color Color;
+	};
 	Cursor cursor;
 	Button play;
 	Button exit;
@@ -13,15 +25,22 @@ namespace menu {
 	const int exitY = screenHeight/2+exitHeight*3;
 	const int exitX = screenWidth/2-exitWidth/2;
 	const Color ButtonColor = RED;
-	bool buttonIsClicked(Cursor cursor, Rectangle rect);
+	bool buttonIsClicked(Cursor cursor, Button button);
+	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate);
+	void exitGame(Cursor cursor, Button button);
 	void update();
 	void draw();
 	void drawText();
 	void followMenuCursor(Cursor &cursor);
 	void drawButton(Button button);
+	void initButton(Button &button, int width, int height, int x, int y, Color color);
 	void run() {
 		update();
 		draw();
+	}
+	void init() {
+		initButton(play, playWidth, playHeight, playX, playY, ButtonColor);
+		initButton(exit, exitWidth, exitHeight, exitX, exitY, ButtonColor);
 	}
 	void initButton(Button &button, int width, int height, int x, int y, Color color) {
 		button.Body.width = width;
@@ -41,7 +60,7 @@ namespace menu {
 	void update(){
 		followMenuCursor(cursor);
 		exitGame(cursor,exit);
-		startGame(cursor,play,gameManager::gamestate);
+		startGame(cursor,play,gameManager::Gamestate);
 	}
 	void input() {
 
@@ -59,8 +78,8 @@ namespace menu {
 		DrawRectangleRec(button.Body,button.Color);
 	}
 	void exitGame(Cursor cursor, Button button) {
-		if (buttonIsClicked(cursor, button.Body)) {
-			CloseWindow();
+		if (buttonIsClicked(cursor, button)) {
+			gameManager::gameIsOn = false;
 		}
 	}
 	bool buttonIsClicked(Cursor cursor, Button button) {
@@ -73,7 +92,7 @@ namespace menu {
 		}
 	}
 	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate) {
-		if (buttonIsClicked(cursor, button.Body)) {
+		if (buttonIsClicked(cursor, button)) {
 			gamestate = FirstLevel;
 		}
 	}

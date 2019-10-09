@@ -127,20 +127,22 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Bricks.cpp" />
     <ClCompile Include="End.cpp" />
+    <ClCompile Include="FirstLevel.cpp" />
     <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="Gameplay.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="End.h" />
+    <ClInclude Include="FirstLevel.h" />
     <ClInclude Include="GameManager.h" />
-    <ClInclude Include="Gameplay.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

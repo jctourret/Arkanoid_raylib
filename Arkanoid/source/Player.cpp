@@ -8,7 +8,11 @@ namespace players {
 	const int playerHeight = 10;
 	const int playerSpeed = 8;
 	const int playerLives = 5;
-	void init(Player player, int width, int height, int x, int y, int lives, int speed, Color color) {
+	void initplayer(Player player, int width, int height, int x, int y, int lives, int speed, Color color);
+	void init(){
+		initplayer(player, playerWidth, playerHeight, playerX, playerY, playerLives, playerSpeed, playerColor);
+	}
+	void initplayer(Player player, int width, int height, int x, int y, int lives, int speed, Color color) {
 		player.Body.width = width;
 		player.Body.height = height;
 		player.Body.x = x;
