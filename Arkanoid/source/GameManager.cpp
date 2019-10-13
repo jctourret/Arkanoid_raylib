@@ -3,8 +3,8 @@
 #include "Menu.h"
 #include "FirstLevel.h"
 #include "End.h"
-#include "Ball.h"
 #include "Player.h"
+#include "Ball.h"
 #include "Bricks.h"
 #include "Window.h"
 using namespace menu;
@@ -37,8 +37,8 @@ namespace gameManager{
 	void init() {
 		window::init();
 		menu::init();
-		balls::init();
 		players::init();
+		balls::init();
 		bricks::init();
 	}
 }
