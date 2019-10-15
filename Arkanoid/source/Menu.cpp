@@ -26,6 +26,7 @@ namespace menu {
 	const int exitHeight = 50;
 	const int exitY = screenHeight/2+exitHeight*3;
 	const int exitX = screenWidth/2-exitWidth/2;
+	const int fontSize = 20;
 	const Color ButtonColor = RED;
 	bool buttonIsClicked(Cursor cursor, Button button);
 	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate);
@@ -71,10 +72,10 @@ namespace menu {
 		cursor.Position = GetMousePosition();
 	}
 	void drawText() {
-		DrawText("Arkanoid", GetScreenWidth() / 2- 40, 30, 20, RAYWHITE);
-		DrawText("Presiona 'Play' cuando estes listo para jugar.", GetScreenWidth() / 2 - GetScreenWidth() / 4, 50, 20, RAYWHITE);
-		DrawText("Play", static_cast<int>(play.Body.x) + static_cast<int>(play.Body.width) / 3, static_cast<int>(play.Body.y) + static_cast<int>(play.Body.height) / 3, 20, RAYWHITE);
-		DrawText("Exit", static_cast<int>(exit.Body.x) + static_cast<int>(exit.Body.width) / 3, static_cast<int>(exit.Body.y) + static_cast<int>(exit.Body.height) / 3, 20, RAYWHITE);
+		DrawText("ARKANOID", GetScreenWidth() / 2- (MeasureText("ARKANOID",fontSize/2)), 30, 20, RAYWHITE);
+		DrawText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.", GetScreenWidth() / 2 - (MeasureText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.",fontSize)/2), 50, 20, RAYWHITE);
+		DrawText("PLAY", (static_cast<int>(play.Body.x) + static_cast<int>(play.Body.width) / 2)- (MeasureText("PLAY", fontSize)/2), (static_cast<int>(play.Body.y) + static_cast<int>(play.Body.height) / 2)-fontSize/2, fontSize, RAYWHITE);
+		DrawText("EXIT", (static_cast<int>(exit.Body.x)+static_cast<int>(exit.Body.width)/2)- (MeasureText("EXIT", fontSize) / 2), (static_cast<int>(exit.Body.y)+static_cast<int>(exit.Body.height)/2)-(fontSize/2), fontSize, RAYWHITE);
 	}
 	void drawButton(Button button) {
 		DrawRectangleRec(button.Body,button.Color);

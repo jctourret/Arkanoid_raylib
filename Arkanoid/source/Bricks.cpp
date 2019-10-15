@@ -3,7 +3,7 @@
 using namespace window;
 namespace bricks {
 	const int brickWidth = screenWidth / 15;
-	const int brickHeigth =screenHeight / 10;
+	const int brickHeigth = screenHeight / 10;
 	Brick brick;
 	void initBrick(Brick &brick, int width, int heigth);
 	void init() {

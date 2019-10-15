@@ -10,8 +10,8 @@ using namespace window;
 using namespace bricks;
 using namespace balls;
 namespace firstlv {
-	const int bricksPerLine=15;
-	const int linesOfBricks=5;
+	const int bricksPerLine=10;
+	const int linesOfBricks=3;
 	bool hasCollided = false;
 	float ballSpeedY = screenHeight;
 	float ballSpeedXSmallIncrease = (screenWidth/8);
@@ -88,6 +88,7 @@ namespace firstlv {
 						ball.Position.y < brickMatrix[i][j].Body.y + brickMatrix[i][j].Body.height) {
 						brickMatrix[i][j].active = false;
 						ball.SpeedX *= -1;
+						if (ball.SpeedX == 0) { ball.SpeedX -= ballSpeedXSmallIncrease; }
 					}
 					//Hit Left
 					if (ball.Position.x + ball.Radius >= brickMatrix[i][j].Body.x &&
@@ -96,6 +97,8 @@ namespace firstlv {
 						ball.Position.y < brickMatrix[i][j].Body.y + brickMatrix[i][j].Body.height) {
 						brickMatrix[i][j].active = false;
 						ball.SpeedX *= -1;
+						if (ball.SpeedX == 0) { ball.SpeedX -= ballSpeedXSmallIncrease; }
+
 					}
 				}
 			}
@@ -121,30 +124,23 @@ namespace firstlv {
 		if (hasCollided == false && ballHittingPlayer(ball, player)) {
 			if (player.Body.x + player.Body.width / 4 >= ball.Position.x) {
 				if (ball.SpeedX > 0) { ball.SpeedX = (-ball.SpeedX) - ballSpeedXBigIncrease; }
-				if (ball.SpeedX <= 0) { ball.SpeedX -= ballSpeedXBigIncrease; }
+				else if (ball.SpeedX <= 0) { ball.SpeedX -= ballSpeedXBigIncrease; }
 			}
-			if (player.Body.x + player.Body.width / 2 >= ball.Position.x&&
+			if (player.Body.x + player.Body.width / 2 > ball.Position.x&&
 				player.Body.x + player.Body.width / 4 < ball.Position.x) {
 				if (ball.SpeedX > 0) { ball.SpeedX = (-ball.SpeedX) - ballSpeedXSmallIncrease; } // si esta bajando que la invierta y acelere
-				if (ball.SpeedX <= 0) { ball.SpeedX -= ballSpeedXSmallIncrease; } // si esta subiendo que acelere
+				else if (ball.SpeedX <= 0) { ball.SpeedX -= ballSpeedXSmallIncrease; } // si esta subiendo que acelere
 			}
 			if (player.Body.x + player.Body.width / 2 < ball.Position.x&&
-				player.Body.x + player.Body.width / 2 + player.Body.width / 4 > ball.Position.y) {
+				player.Body.x + player.Body.width / 2 + player.Body.width / 4 > ball.Position.x) {
 				if (ball.SpeedX < 0) { ball.SpeedX = (-ball.SpeedX) + ballSpeedXSmallIncrease; } // si esta subiendo que se invierta  y acelere
-				if (ball.SpeedX >= 0) { ball.SpeedX += ballSpeedXSmallIncrease; } // si esta bajando acelera
+				else if (ball.SpeedX >= 0) { ball.SpeedX += ballSpeedXSmallIncrease; } // si esta bajando acelera
 			}
-			if (player.Body.y + player.Body.height / 2 + player.Body.height / 4 <= ball.Position.y) {
-				if (ball.SpeedX < 0) { ball.SpeedX = (-ball.SpeedX) + ballSpeedXBigIncrease; }
-				if (ball.SpeedX >= 0) { ball.SpeedX += ballSpeedXBigIncrease; }
+			if (player.Body.x + player.Body.width / 2 + player.Body.width / 4 <= ball.Position.x) {
+				if (ball.SpeedX < 0) { ball.SpeedX = (-ball.SpeedX) + ballSpeedXBigIncrease;}
+				else if (ball.SpeedX >= 0) { ball.SpeedX += ballSpeedXBigIncrease; }
 			}
-			if (ball.SpeedY > 0)
-			{
-				ball.SpeedY++;
-			}
-			if (ball.SpeedY < 0)
-			{
-				ball.SpeedY--;
-			}
+			ball.SpeedY++;
 			ball.SpeedY = -ball.SpeedY;
 			hasCollided = true;
 			ball.color = player.Color;
@@ -197,8 +193,8 @@ namespace firstlv {
 		{
 			for (int j = 0; j < bricksPerLine; j++)
 			{
-				brickMatrix[i][j].Body.x= j* individualBrick.Body.width;
-				brickMatrix[i][j].Body.y = i * individualBrick.Body.height;
+				brickMatrix[i][j].Body.x= screenWidth/33+(j*screenWidth/33+j* individualBrick.Body.width);
+				brickMatrix[i][j].Body.y = screenHeight / 20 + (i*screenHeight/ 20 + i * individualBrick.Body.height);
 				brickMatrix[i][j].Body.width = individualBrick.Body.width;
 				brickMatrix[i][j].Body.height = individualBrick.Body.height;
 				brickMatrix[i][j].active = true;
@@ -209,8 +205,21 @@ namespace firstlv {
 		for (int i = 0; i < linesOfBricks; i++) {
 			for (int j = 0; j < bricksPerLine; j++) {
 				if (bricksOfLevel[i][j].active) {
-					if ((i + j) % 2 == 0) DrawRectangleRec(bricksOfLevel[i][j].Body, GRAY);
-					else DrawRectangleRec(bricksOfLevel[i][j].Body, DARKGRAY);
+					int random = GetRandomValue(0, 10);
+					if (random <= 3) DrawRectangleRec(bricksOfLevel[i][j].Body, YELLOW);
+					else if (random > 3 && random <= 6){
+						DrawRectangleRec(bricksOfLevel[i][j].Body, BLUE);
+					}
+					else if (random > 6 && random <= 9){
+						DrawRectangleRec(bricksOfLevel[i][j].Body, RED);
+					}
+					else if (random > 9 && random <= 10){
+
+						DrawRectangleRec(bricksOfLevel[i][j].Body, GRAY);
+					}
+					if (bricksOfLevel[i][j].active==false) {
+
+					}
 				}
 			}
 		}

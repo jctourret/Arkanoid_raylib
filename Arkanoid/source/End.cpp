@@ -31,14 +31,15 @@ namespace end {
 	const int exitY = screenHeight / 2 + exitHeight * 3;
 	const int exitX = screenWidth / 2 - exitWidth / 2;
 	const Color ButtonColor = RED;
-	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate, Player &player);
-	void exitGame(Cursor cursor, Button button);
 	void update();
 	void draw();
-	void drawText(Player player);
-	void followMenuCursor(Cursor &cursor);
-	void drawButton(Button button);
 	void initButton(Button &button, int width, int height, int x, int y, Color color);
+	void followMenuCursor(Cursor &cursor);
+	void exitGame(Cursor cursor, Button button);
+	void startGame(Cursor cursor, Button button,gameManager::Gamestates &gamestate,Player &player);
+	void drawText(Player player);
+	void drawButton(Button button);
+	bool buttonIsClicked(Cursor cursor, Button button);
 	void run() {
 		update();
 		draw();
@@ -60,8 +61,27 @@ namespace end {
 		drawText(player);
 		EndDrawing();
 	}
+	void initButton(Button &button, int width, int height, int x, int y, Color color) {
+		button.Body.width = width;
+		button.Body.height = height;
+		button.Body.x = x;
+		button.Body.y = y;
+		button.Color = color;
+	}
 	void followMenuCursor(Cursor &cursor) {
 		cursor.Position = GetMousePosition();
+	}
+	void exitGame(Cursor cursor, Button button) {
+		if (buttonIsClicked(cursor, button)) {
+			gameManager::gameIsOn = false;
+		}
+	}
+	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate, Player &player) {
+		if (buttonIsClicked(cursor, button)) {
+			initOnce = true;
+			player.Lives = playerLives;
+			gamestate = FirstLevel;
+		}
 	}
 	void drawText(Player player) {
 		DrawText("Arkanoid", GetScreenWidth() / 2 - 40, 30, 20, RAYWHITE);
@@ -77,13 +97,6 @@ namespace end {
 	void drawButton(Button button) {
 		DrawRectangleRec(button.Body, button.Color);
 	}
-	void initButton(Button &button, int width, int height, int x, int y, Color color) {
-		button.Body.width = width;
-		button.Body.height = height;
-		button.Body.x = x;
-		button.Body.y = y;
-		button.Color = color;
-	}
 	bool buttonIsClicked(Cursor cursor, Button button) {
 		if (CheckCollisionCircleRec(cursor.Position, static_cast<float>(cursor.Radius), button.Body)
 			&& IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
@@ -91,18 +104,6 @@ namespace end {
 		}
 		else {
 			return false;
-		}
-	}
-	void exitGame(Cursor cursor, Button button) {
-		if (buttonIsClicked(cursor, button)) {
-			gameManager::gameIsOn = false;
-		}
-	}
-	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate,Player &player) {
-		if (buttonIsClicked(cursor, button)) {
-			initOnce = true;
-			player.Lives = playerLives;
-			gamestate = FirstLevel;
 		}
 	}
 }
