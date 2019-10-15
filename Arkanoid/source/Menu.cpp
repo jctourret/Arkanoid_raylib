@@ -1,5 +1,7 @@
 #include "Menu.h"
 #include "Window.h"
+#include "GameManager.h"
+#include "raylib.h"
 using namespace gameManager;
 using namespace window;
 namespace menu {

@@ -8,7 +8,7 @@ namespace players {
 	const int playerHeight = 10;
 	const int playerX = screenWidth / 2 - playerWidth / 2;
 	const int playerY = screenHeight - screenHeight / 10;
-	const int playerSpeed = 8 ;
+	const int playerSpeed = screenWidth;
 	const int playerLives = 5;
 	void initplayer(Player &player, int width, int height, int x, int y, int lives, int speed, Color color);
 	void init(){

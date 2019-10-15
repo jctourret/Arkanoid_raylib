@@ -9,6 +9,7 @@ namespace players {
 		int Speed;
 	};
 	extern Player player;
+	extern const int playerLives;
 	void init();
 }
 #endif PLAYER_H

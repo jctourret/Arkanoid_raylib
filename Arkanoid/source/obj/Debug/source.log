@@ -1,6 +1,6 @@
-﻿  FirstLevel.cpp
-c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(14): warning C4244: 'inicializando': conversión de 'const int' a 'float'; posible pérdida de datos
-c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(15): warning C4244: 'inicializando': conversión de 'const int' a 'float'; posible pérdida de datos
-c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(127): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(127): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+﻿  End.cpp
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(81): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(82): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(83): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(84): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
   source.vcxproj -> C:\Users\Juan Cruz\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe

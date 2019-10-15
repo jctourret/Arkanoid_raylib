@@ -30,6 +30,7 @@ namespace gameManager{
 			case ThirdLevel:
 				break;
 			case End:
+				end::run();
 				break;
 			}
 		}
@@ -37,6 +38,7 @@ namespace gameManager{
 	void init() {
 		window::init();
 		menu::init();
+		end::init();
 		players::init();
 		balls::init();
 		bricks::init();

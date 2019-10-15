@@ -12,7 +12,7 @@ namespace balls{
 	void init(){
 		initBall(ball,player, ballRadius,ballColor,ballActive);
 	}
-	void initBall(Ball &ball, Player player, float radius, Color color,bool active) {
+	void initBall(Ball &ball, Player player, float radius, Color color, bool active) {
 		ball.Position.x = player.Body.x + (player.Body.width / 2);
 		ball.Position.y = player.Body.y - 20;
 		ball.Radius = radius;
