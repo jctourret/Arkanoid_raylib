@@ -1,37 +1,32 @@
-﻿  FirstLevel.cpp
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(16): warning C4244: 'inicializando': conversión de 'const int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(17): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(18): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(19): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(64): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(64): warning C4100: 'individualBrick': parámetro formal sin referencia
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(107): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(114): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(114): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(115): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(122): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(122): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(152): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(154): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(157): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(172): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(172): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(185): warning C4459: la declaración de 'ball' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\ball.h(13): note: vea la declaración de 'balls::ball'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(186): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(186): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(188): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\firstlevel.cpp(227): warning C4459: la declaración de 'player' oculta la declaración global
-  c:\users\administrador\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
-  source.vcxproj -> C:\Users\Administrador\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe
+﻿  End.cpp
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(66): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(67): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(68): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(69): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(72): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(21): note: vea la declaración de 'end::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(75): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(21): note: vea la declaración de 'end::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(80): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(21): note: vea la declaración de 'end::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(80): warning C4459: la declaración de 'player' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(87): warning C4459: la declaración de 'player' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\player.h(11): note: vea la declaración de 'players::player'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(101): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\end.cpp(21): note: vea la declaración de 'end::cursor'
+  Menu.cpp
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(63): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(64): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(65): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(66): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(78): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(17): note: vea la declaración de 'menu::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(81): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(17): note: vea la declaración de 'menu::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(90): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(17): note: vea la declaración de 'menu::cursor'
+c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(95): warning C4459: la declaración de 'cursor' oculta la declaración global
+  c:\users\juan cruz\desktop\arkanoid_raylib\arkanoid\source\menu.cpp(17): note: vea la declaración de 'menu::cursor'
+  Generando código...
+  source.vcxproj -> C:\Users\Juan Cruz\Desktop\Arkanoid_raylib\Arkanoid\bin\Debug\src.exe

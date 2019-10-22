@@ -8,7 +8,9 @@ namespace balls{
 	const float ballRadius = 10;
 	Color ballColor = YELLOW;
 	bool ballActive = false;
+	
 	void initBall(Ball &ball, Player player, float radius, Color color, bool active);
+	
 	void init(){
 		initBall(ball,player, ballRadius,ballColor,ballActive);
 	}

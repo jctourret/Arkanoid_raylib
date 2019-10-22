@@ -7,8 +7,6 @@ using namespace window;
 namespace menu {
 	struct Cursor {
 		Vector2 Position;
-		Color Color = WHITE;
-		Vector2 Speed = { 7.5f,6.0f };
 		int Radius = 10;
 	};
 	struct Button {
@@ -28,15 +26,17 @@ namespace menu {
 	const int exitX = screenWidth/2-exitWidth/2;
 	const int fontSize = 20;
 	const Color ButtonColor = RED;
+	
+	void update();
+	void draw();
+	void initButton(Button &button, int width, int height, int x, int y, Color color);
+	void drawButton(Button button);
+	void drawText();
+	void followMenuCursor(Cursor &cursor);
 	bool buttonIsClicked(Cursor cursor, Button button);
 	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate);
 	void exitGame(Cursor cursor, Button button);
-	void update();
-	void draw();
-	void drawText();
-	void followMenuCursor(Cursor &cursor);
-	void drawButton(Button button);
-	void initButton(Button &button, int width, int height, int x, int y, Color color);
+	
 	void run() {
 		update();
 		draw();
@@ -44,13 +44,6 @@ namespace menu {
 	void init() {
 		initButton(play, playWidth, playHeight, playX, playY, ButtonColor);
 		initButton(exit, exitWidth, exitHeight, exitX, exitY, ButtonColor);
-	}
-	void initButton(Button &button, int width, int height, int x, int y, Color color) {
-		button.Body.width = width;
-		button.Body.height = height;
-		button.Body.x = x;
-		button.Body.y = y;
-		button.Color = color;
 	}
 	void draw() {
 		BeginDrawing();
@@ -65,25 +58,24 @@ namespace menu {
 		exitGame(cursor,exit);
 		startGame(cursor,play,gameManager::Gamestate);
 	}
-	void input() {
-
+	void initButton(Button &button, int width, int height, int x, int y, Color color) {
+		button.Body.width = width;
+		button.Body.height = height;
+		button.Body.x = x;
+		button.Body.y = y;
+		button.Color = color;
+	}
+	void drawButton(Button button) {
+		DrawRectangleRec(button.Body, button.Color);
+	}
+	void drawText() {
+		DrawText("ARKANOID", GetScreenWidth() / 2 - (MeasureText("ARKANOID", fontSize / 2)), 30, 20, RAYWHITE);
+		DrawText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.", GetScreenWidth() / 2 - (MeasureText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.", fontSize) / 2), 50, 20, RAYWHITE);
+		DrawText("PLAY", (static_cast<int>(play.Body.x) + static_cast<int>(play.Body.width) / 2) - (MeasureText("PLAY", fontSize) / 2), (static_cast<int>(play.Body.y) + static_cast<int>(play.Body.height) / 2) - fontSize / 2, fontSize, RAYWHITE);
+		DrawText("EXIT", (static_cast<int>(exit.Body.x) + static_cast<int>(exit.Body.width) / 2) - (MeasureText("EXIT", fontSize) / 2), (static_cast<int>(exit.Body.y) + static_cast<int>(exit.Body.height) / 2) - (fontSize / 2), fontSize, RAYWHITE);
 	}
 	void followMenuCursor(Cursor &cursor) {
 		cursor.Position = GetMousePosition();
-	}
-	void drawText() {
-		DrawText("ARKANOID", GetScreenWidth() / 2- (MeasureText("ARKANOID",fontSize/2)), 30, 20, RAYWHITE);
-		DrawText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.", GetScreenWidth() / 2 - (MeasureText("PRESIONE 'PLAY' CUANDO ESTE LISTO PARA JUGAR.",fontSize)/2), 50, 20, RAYWHITE);
-		DrawText("PLAY", (static_cast<int>(play.Body.x) + static_cast<int>(play.Body.width) / 2)- (MeasureText("PLAY", fontSize)/2), (static_cast<int>(play.Body.y) + static_cast<int>(play.Body.height) / 2)-fontSize/2, fontSize, RAYWHITE);
-		DrawText("EXIT", (static_cast<int>(exit.Body.x)+static_cast<int>(exit.Body.width)/2)- (MeasureText("EXIT", fontSize) / 2), (static_cast<int>(exit.Body.y)+static_cast<int>(exit.Body.height)/2)-(fontSize/2), fontSize, RAYWHITE);
-	}
-	void drawButton(Button button) {
-		DrawRectangleRec(button.Body,button.Color);
-	}
-	void exitGame(Cursor cursor, Button button) {
-		if (buttonIsClicked(cursor, button)) {
-			gameManager::gameIsOn = false;
-		}
 	}
 	bool buttonIsClicked(Cursor cursor, Button button) {
 		if (CheckCollisionCircleRec(cursor.Position, static_cast<float>(cursor.Radius), button.Body)
@@ -92,6 +84,11 @@ namespace menu {
 		}
 		else {
 			return false;
+		}
+	}
+	void exitGame(Cursor cursor, Button button) {
+		if (buttonIsClicked(cursor, button)) {
+			gameManager::gameIsOn = false;
 		}
 	}
 	void startGame(Cursor cursor, Button button, gameManager::Gamestates &gamestate) {

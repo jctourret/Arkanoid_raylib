@@ -4,7 +4,10 @@
 namespace bricks {
 	struct Brick {
 		Rectangle Body;
-		bool active;
+		bool Active;
+		Color Color;
+		int Lives;
+		bool Powerup;
 	};
 	extern Brick brick;
 	void init();

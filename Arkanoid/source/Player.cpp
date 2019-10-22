@@ -10,7 +10,9 @@ namespace players {
 	const int playerY = screenHeight - screenHeight / 10;
 	const int playerSpeed = screenWidth;
 	const int playerLives = 5;
+
 	void initplayer(Player &player, int width, int height, int x, int y, int lives, int speed, Color color);
+	
 	void init(){
 		initplayer(player, playerWidth, playerHeight, playerX, playerY, playerLives, playerSpeed, playerColor);
 	}

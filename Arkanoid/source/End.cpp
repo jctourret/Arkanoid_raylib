@@ -1,4 +1,3 @@
-#include "End.h"
 #include "FirstLevel.h"
 #include "Window.h"
 #include "GameManager.h"
@@ -11,8 +10,6 @@ using namespace firstlv;
 namespace end {
 	struct Cursor {
 		Vector2 Position;
-		Color Color = WHITE;
-		Vector2 Speed = { 7.5f,6.0f };
 		int Radius = 10;
 	};
 	struct Button {
@@ -31,15 +28,16 @@ namespace end {
 	const int exitY = screenHeight / 2 + exitHeight * 3;
 	const int exitX = screenWidth / 2 - exitWidth / 2;
 	const Color ButtonColor = RED;
+	
 	void update();
 	void draw();
 	void initButton(Button &button, int width, int height, int x, int y, Color color);
+	void drawButton(Button button);
+	void drawText(Player player);
 	void followMenuCursor(Cursor &cursor);
+	bool buttonIsClicked(Cursor cursor, Button button);
 	void exitGame(Cursor cursor, Button button);
 	void startGame(Cursor cursor, Button button,gameManager::Gamestates &gamestate,Player &player);
-	void drawText(Player player);
-	void drawButton(Button button);
-	bool buttonIsClicked(Cursor cursor, Button button);
 	void run() {
 		update();
 		draw();

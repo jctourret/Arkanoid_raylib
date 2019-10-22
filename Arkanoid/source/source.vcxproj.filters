@@ -37,6 +37,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>Objetos</Filter>
     </ClCompile>
+    <ClCompile Include="PowerUp.cpp">
+      <Filter>Objetos</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -61,6 +64,9 @@
       <Filter>Menus</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUp.h">
       <Filter>Objetos</Filter>
     </ClInclude>
   </ItemGroup>

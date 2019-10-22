@@ -4,7 +4,6 @@
 namespace window {
 	extern const int screenWidth;
 	extern const int screenHeight;
-	extern void run();
 	extern void init();
 }
 #endif WINDOW_H

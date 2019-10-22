@@ -1,16 +1,20 @@
 #include "GameManager.h"
 #include "raylib.h"
 #include "Menu.h"
+#include "PowerUp.h"
 #include "FirstLevel.h"
 #include "End.h"
 #include "Player.h"
 #include "Ball.h"
 #include "Bricks.h"
 #include "Window.h"
+
+using namespace powerup;
 using namespace menu;
 using namespace bricks;
 using namespace players;
 using namespace balls;
+
 namespace gameManager{
 	bool gameIsOn=true;
 	Gamestates Gamestate=Menu;
@@ -37,6 +41,7 @@ namespace gameManager{
 	}
 	void init() {
 		window::init();
+		powerup::init();
 		menu::init();
 		end::init();
 		players::init();
