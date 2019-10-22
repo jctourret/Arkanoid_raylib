@@ -1,5 +1,5 @@
-#include "Player.h"
-#include "Window.h"
+#include "Objects\Player.h"
+#include "Objects/Window.h"
 using namespace window;
 namespace players {
 	Player player;

@@ -1,13 +1,13 @@
-#include "GameManager.h"
 #include "raylib.h"
-#include "Menu.h"
-#include "PowerUp.h"
-#include "FirstLevel.h"
-#include "End.h"
-#include "Player.h"
-#include "Ball.h"
-#include "Bricks.h"
-#include "Window.h"
+#include "System\GameManager.h"
+#include "Scenes\Menu.h"
+#include "Objects\PowerUp.h"
+#include "Scenes\FirstLevel.h"
+#include "Scenes\End.h"
+#include "Objects\Player.h"
+#include "Objects\Ball.h"
+#include "Objects\Bricks.h"
+#include "Objects\Window.h"
 
 using namespace powerup;
 using namespace menu;

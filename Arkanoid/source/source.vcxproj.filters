@@ -1,73 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Objetos">
+    <Filter Include="Objects">
       <UniqueIdentifier>{8fba8428-c9f3-432f-a490-43523031c34d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Menus">
-      <UniqueIdentifier>{07609116-dfc6-4c4a-8b4f-4117b54489ad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Systems">
+    <Filter Include="System">
       <UniqueIdentifier>{6cc53531-8470-4530-b7e4-37c07446d5a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{07609116-dfc6-4c4a-8b4f-4117b54489ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Player.cpp">
-      <Filter>Objetos</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="End.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="Ball.cpp">
-      <Filter>Objetos</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Systems</Filter>
+    <ClCompile Include="Objects\Ball.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Bricks.cpp">
-      <Filter>Objetos</Filter>
+    <ClCompile Include="Objects\Bricks.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="FirstLevel.cpp">
-      <Filter>Menus</Filter>
+    <ClCompile Include="Objects\Player.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Objetos</Filter>
+    <ClCompile Include="Objects\PowerUp.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="PowerUp.cpp">
-      <Filter>Objetos</Filter>
+    <ClCompile Include="Objects\Window.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\End.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\FirstLevel.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Menu.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="System\GameManager.cpp">
+      <Filter>System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Objetos</Filter>
+    <ClInclude Include="Objects\Ball.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Menus</Filter>
+    <ClInclude Include="Objects\Bricks.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="End.h">
-      <Filter>Menus</Filter>
+    <ClInclude Include="Objects\Player.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Ball.h">
-      <Filter>Objetos</Filter>
+    <ClInclude Include="Objects\PowerUp.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="GameManager.h">
-      <Filter>Systems</Filter>
+    <ClInclude Include="Objects\Window.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Bricks.h">
-      <Filter>Objetos</Filter>
+    <ClInclude Include="Scenes\End.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="FirstLevel.h">
-      <Filter>Menus</Filter>
+    <ClInclude Include="Scenes\FirstLevel.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Objetos</Filter>
+    <ClInclude Include="Scenes\Menu.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="PowerUp.h">
-      <Filter>Objetos</Filter>
+    <ClInclude Include="System\GameManager.h">
+      <Filter>System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

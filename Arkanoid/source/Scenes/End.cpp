@@ -1,8 +1,8 @@
-#include "FirstLevel.h"
-#include "Window.h"
-#include "GameManager.h"
+#include "scn\FirstLevel.h"
+#include "obj\Window.h"
+#include "sys\GameManager.h"
 #include "raylib.h"
-#include "Player.h"
+#include "obj\Player.h"
 using namespace window;
 using namespace players;
 using namespace gameManager;

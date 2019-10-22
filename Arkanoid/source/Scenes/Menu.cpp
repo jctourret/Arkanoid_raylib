@@ -1,6 +1,6 @@
-#include "Menu.h"
-#include "Window.h"
-#include "GameManager.h"
+#include "Scenes\Menu.h"
+#include "Objects\Window.h"
+#include "System\GameManager.h"
 #include "raylib.h"
 using namespace gameManager;
 using namespace window;

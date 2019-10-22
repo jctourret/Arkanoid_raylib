@@ -326,7 +326,7 @@ namespace firstlv {
 	}
 	void triggerGrowPlayer(Player &player) {
 		int time = GetFrameTime();
-		int timer;
+		int timer=0;
 		if (GrowPlayer.Active && CheckCollisionRecs(GrowPlayer.Body,player.Body)) {
 			GrowPlayer.Active = false;
 			player.Body.width += 10;
@@ -339,7 +339,7 @@ namespace firstlv {
 	}
 	void triggerGun(Player player,Brick(&brickMatrix)[linesOfBricks][bricksPerLine]) {
 		int time = GetFrameTime();
-		int timer;
+		int timer=0;
 		if (CheckCollisionRecs(Gun.Body, player.Body)) {
 			Gun.Active = false;
 			gunIsOn;
@@ -377,7 +377,7 @@ namespace firstlv {
 	}
 	void triggerCatch(Player player) {
 		int time = GetFrameTime();
-		int timer;
+		int timer=0;
 		if (CheckCollisionRecs(Gun.Body, player.Body)) {
 			CatchBall.Active = false;
 		}

@@ -1,6 +1,6 @@
-#include "Ball.h"
-#include "Window.h"
-#include "Player.h"
+#include "Objects\Ball.h"
+#include "Objects\Window.h"
+#include "Objects\Player.h"
 using namespace window;
 using namespace players;
 namespace balls{
